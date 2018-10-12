@@ -9,7 +9,7 @@ namespace WebApplication1
         protected override void Load(ContainerBuilder builder)
         {
             #region Repository注册
-            //builder.RegisterGeneric(typeof(EFRepository<>)).Named("EFRepository", typeof(IRepository<>)).InstancePerLifetimeScope(); 这种named方式不知道为什么会报错，改为下面这种
+            //builder.RegisterGeneric(typeof(EFRepository<>)).Named("EFRepository", typeof(IRepository<>)).InstancePerLifetimeScope(); //这种named方式不知道为什么会报错，改为下面这种
             builder.RegisterGeneric(typeof(EFRepository<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
 
             #endregion

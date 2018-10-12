@@ -12,9 +12,10 @@ namespace WebApplication1.Controllers
     public class UserController : Controller
     {
         private IUserService userService;
-        public UserController(IUserService s)
+
+        public UserController(IUserService user)
         {
-            userService = s;
+            userService = user;
         }
         // GET: User
         public ActionResult login(string name, string pw)
