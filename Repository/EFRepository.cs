@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Repository
 {
-    public abstract class EFRepository<T> : IRepository<T> where T : class
+    public class EFRepository<T> : IRepository<T> where T : class
     {
         protected readonly EFContent context;
 

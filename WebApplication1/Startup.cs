@@ -45,7 +45,7 @@ namespace WebApplication1
             //services.AddScoped(typeof(IRepository<>), typeof(EFRepository<>));
 
             //ef注入
-            var connect = "Server=localhost;User Id=root;Password=123456;Database=coretest";
+            var connect = @"Server=localhost;User Id=root;Password=111111;Database=coretest";
             services.AddDbContext<EFContent>(options => options.UseMySql(connect));
 
             // Add Autofac
